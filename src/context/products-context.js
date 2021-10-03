@@ -15,7 +15,7 @@ export function ProductProvider({ children }) {
             {children}
         </ProductContext.Provider>
     );
-};
+}
 
 export const useProducts = () => {
     return useContext(ProductContext);
