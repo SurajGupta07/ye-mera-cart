@@ -22,6 +22,15 @@ const allProducts = [
     {
         id: uuidv4(),
         brandnName: "Roadster",
+        description: "Slim Fit Casual shirt",
+        image: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/1291760/2017/12/5/11512469309068-Highlander-Dark-Green-Slim-Fit-Casual-Shirt-5071512469308877-3.jpg",
+        offeredPrice: 1689,
+        actualPrice: 2599,
+        wishlist: false,
+    },
+    {
+        id: uuidv4(),
+        brandnName: "Roadster",
         description: "Regular Fit Casual shirt",
         image: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2230204/2021/3/16/b93f84ed-41cd-4f2b-bb52-f2b67f8c6c2d1615874312574-Roadster-Men-Blue--Black-Regular-Fit-Checked-Casual-Shirt-74-1.jpg",
         offeredPrice: 584,
@@ -45,25 +54,7 @@ const allProducts = [
         offeredPrice: 1689,
         actualPrice: 2599,
         wishlist: false,
-    },
-    {
-        id: uuidv4(),
-        brandnName: "Roadster",
-        description: "Slim Fit Casual shirt",
-        image: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/1291760/2017/12/5/11512469309068-Highlander-Dark-Green-Slim-Fit-Casual-Shirt-5071512469308877-3.jpg",
-        offeredPrice: 1689,
-        actualPrice: 2599,
-        wishlist: false,
-    },
-    {
-        id: uuidv4(),
-        brandnName: "Roadster",
-        description: "Slim Fit Casual shirt",
-        image: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/1291760/2017/12/5/11512469309068-Highlander-Dark-Green-Slim-Fit-Casual-Shirt-5071512469308877-3.jpg",
-        offeredPrice: 1689,
-        actualPrice: 2599,
-        wishlist: false,
-    },
+    }
 ];
 
 export default allProducts;

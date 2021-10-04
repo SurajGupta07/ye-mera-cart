@@ -4,3 +4,86 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.navigation {
+    background-color: #5a67d8;
+    color: white;
+    padding: 1rem;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navigation ul li {
+    padding: 0 0.5rem;
+}
+
+.navigation ul li:hover {
+    text-decoration: underline;
+}
+
+.navigation .btn {
+    background-color: white;
+    color: #5a67d8;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+.nav-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.items-link {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.card {
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: auto;
+}
+
+.card-title {
+    font-weight: 500;
+    margin: 0;
+}
+
+.btn {
+    outline: none;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline-primary {
+    border-color: #5a67d8;
+    color: #5a67d8;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #5a67d8;
+    color: white;
+}
