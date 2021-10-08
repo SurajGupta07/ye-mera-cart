@@ -4,7 +4,7 @@ import { useCart } from "../context/cart-context";
 
 export const ProductCard = () => {
     const { productItems } = useProducts();
-    const { setCartItems } = useCart();
+    const { setCartItems, setWishlist } = useCart();
     const navigate = useNavigate();
     return (
         <div>
@@ -60,6 +60,14 @@ export const ProductCard = () => {
                                 }}
                             >
                                 Add to cart
+                            </button>
+                            <button
+                            className="btn btn-outline-primary"
+                            onClick={() => {
+                                setWishlist((items) => [...items, item])
+                                navigate("/wishlist")
+                            }}>
+                                Add to wishlist
                             </button>
                         </div>
                     </div>
