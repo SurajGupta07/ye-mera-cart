@@ -87,3 +87,23 @@
     background-color: #5a67d8;
     color: white;
 }
+
+.checkout-box {
+    width: 20rem;
+    height: auto;
+    margin-left: 1rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border: 2px solid black;
+}
+
+.price-text {
+    margin-top: 1rem;
+    opacity: 70%;
+    text-align: center;
+}
+
+.btn-space {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}

@@ -1,23 +1,28 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import { ProductCard } from "./components/Product";
 import { Header } from "./components/Header";
 import { Cart } from "./components/Cart";
 import { Wishlist } from "./components/Wishlist";
 import { Login } from "./components/Login";
-import { useState } from "react";
+// import { PrivateRoute } from "./components/PrivateRoute";
+const login = false;
+
+function PrivateRoute({ ...props }) {
+    console.log(login)
+    return login ? <Route {...props} /> : <Navigate replace to="/login" />;
+}
 
 function App() {
-    const [login, setLogin] = useState(true);
+
     return (
         <div>
             <Header />
             <Routes>
                 <Route path="/" element={<ProductCard />} />
-                {login && <Route path="/cart" element={<Cart />} />}
-                {login && <Route path="/wishlist" element={<Wishlist />} />}
-                {!login && <Route path="/cart" element={<Login />} />}
-                {!login && <Route path="/wishlist" element={<Login />} />}
+                <Route path = "/login" element={<Login />} />
+                <PrivateRoute path="/cart" element={<Cart />} />
+                <PrivateRoute path="/wishlist" element={<Wishlist />} />
             </Routes>
         </div>
     );

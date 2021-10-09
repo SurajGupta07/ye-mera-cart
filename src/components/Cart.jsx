@@ -1,7 +1,8 @@
 import { useCart } from "../context/cart-context";
+import { Checkout } from "./Checkout";
 
 export const Cart = () => {
-    const { cartItems, setCartItems } = useCart();
+    const { cartItems, setCartItems, cartCount, setCartCount } = useCart();
     const removeFromCart = (product) => {
         setCartItems((prevItems) =>
             prevItems.filter((item) => item.id !== product.product.id)
@@ -43,11 +44,27 @@ export const Cart = () => {
                                 )}
                                 % off)
                             </p>
-                            <div>{product.type}</div>
-                            <div>{product.stitched}</div>
                             <button
                                 className="btn btn-outline-primary"
-                                onClick={() => removeFromCart({product})}
+                                onClick={() =>
+                                    setCartCount((cartCount) => cartCount + 1)
+                                }
+                            >
+                                +
+                            </button>
+                            {cartCount}
+                            <button
+                                className="btn btn-outline-primary"
+                                onClick={() =>
+                                    setCartCount((cartCount) => cartCount - 1)
+                                }
+                            >
+                                -
+                            </button>
+                            <div>{product.type}</div>
+                            <button
+                                className="btn btn-outline-primary"
+                                onClick={() => removeFromCart({ product })}
                             >
                                 Delete
                             </button>
@@ -55,6 +72,7 @@ export const Cart = () => {
                     </div>
                 ))}
             </div>
+            <Checkout />
         </div>
     );
 };
